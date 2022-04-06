@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { SortableContainer, SortableElement, SortableHandle } from 'react-sortable-hoc';
 
 import SoundCard from '~/components/SoundCard';
 
@@ -68,6 +69,40 @@ export default function Index() {
         }
     };
 
+    const onSortStart = ({ node }) => {
+        document.documentElement.style.pointerEvents = 'none';
+    }
+
+    const onSortEnd = ({ oldIndex, newIndex, node, e }) => {
+        setBookmarkedSounds((bookmarkedSounds) => {
+            let newSounds = [...bookmarkedSounds];
+            let oldVal = newSounds[oldIndex];
+
+            newSounds.splice(oldIndex, 1);
+            newSounds.splice(newIndex, 0, oldVal);
+            localStorage.setItem('bookmarkedSounds', JSON.stringify(newSounds));
+            return newSounds;
+        });
+
+        document.documentElement.style.pointerEvents = null;
+    };
+
+    const SortableItem = SortableElement(({ value }) => (
+        <SoundCard {...sounds[value]} toggleBookmarked={() => toggleBookmarked(value)} inBookmarkSection />
+    ));
+
+    const SortableList = SortableContainer(({ items }) => (
+        <div className="home-c-bookmarked-sounds-grid bg-slate-400 rounded-md shadow-xl">
+        {
+            items.map((soundIdx, idx) => (
+                <SortableItem value={soundIdx} index={idx} key={sounds[soundIdx].title} />
+            ))
+        }
+        </div>
+    ));
+
+
+
     return (
         <main className="py-20">
             <header className="flex flex-col items-center space-y-6 text-center">
@@ -100,16 +135,9 @@ export default function Index() {
                                         icon in the sound card that you want to bookmark for more convenient usage.</p> 
                                 </div>
                             ) : (
-                                <div className="home-c-bookmarked-sounds-grid bg-slate-400 rounded-md shadow-xl">
-                                    {
-                                        bookmarkedSounds.map((soundIdx) => (
-                                            <SoundCard {...sounds[soundIdx]} key={sounds[soundIdx].title} toggleBookmarked={() => toggleBookmarked(soundIdx)} />
-                                        ))
-                                    }
-                                </div>
+                                <SortableList items={bookmarkedSounds} axis="xy" onSortEnd={onSortEnd} onSortStart={onSortStart} useDragHandle />
                             )
                         )
-                        
                     }
 
                 </div>
