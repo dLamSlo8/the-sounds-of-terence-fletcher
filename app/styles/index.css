@@ -1,0 +1,202 @@
+/* Fonts */
+@font-face {
+    font-family: 'PT Serif';
+    src: url('/fonts/PT_Serif/PTSerif-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    src: url('/fonts/PT_Serif/PTSerif-Bold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    src: url('/fonts/PT_Serif/PTSerif-BoldItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    src: url('/fonts/PT_Serif/PTSerif-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('/fonts/PT_Sans/PTSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('/fonts/PT_Sans/PTSans-Bold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('/fonts/PT_Sans/PTSans-BoldItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('/fonts/PT_Sans/PTSans-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+/* Base */
+* {
+    font-family: 'PT Sans', sans-serif;
+}
+
+body {
+    background-color: rgb(246, 248, 250);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'PT Serif', serif;
+    font-weight: 500;
+}
+
+/* Main */
+.home-c-main-heading {
+    max-width: 565px;
+
+    font-size: 4rem;
+    line-height: 1.33;
+    text-align: center;
+}
+
+.home-c-main-description {
+    max-width: 623px;
+
+    font-size: 1.25rem;
+}
+
+.home-c-sounds-grid,
+.home-c-bookmarked-sounds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.home-c-bookmarked-sounds-grid {
+    padding: 1rem 1rem;
+}
+
+.c-sound-card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.c-sound-card__button > svg {
+    transition: transform 100ms ease-in-out;
+}
+
+.c-sound-card__button[data-type="play"]:active > svg,
+.c-sound-card__button[data-playing="true"]:active > svg {
+    transform: scale(0.8);
+}
+
+.home-c-bookmarked-loader {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        
+
+
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.home-c-bookmarked-loader::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 6px solid #94a3b8;
+    border-color: #94a3b8 transparent #94a3b8 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
