@@ -203,8 +203,12 @@ export default function Index() {
 
             </header>
             <div className="home-c-animation-section sticky top-[35%] xl:top-[20%] flex justify-between items-center overflow-hidden">
-                <img className={`home-c-animation-img transition-transform duration-200 ease-in-out ${inView && '-translate-x-1/2 3xl:translate-x-0'} w-[20%] xl:w-[30%] 2xl:w-[25%]`} src={`/img/terence-fletcher${angy ? '-angry' : ''}.png`} alt="Terence Fletcher" />
-                <img className={`home-c-animation-img transition-transform duration-200 ease-in-out ${inView && 'translate-x-1/2 3xl:translate-x-0'} w-[20%] xl:w-[30%] 2xl:w-[25%]`} src={`/img/andrew-neiman${angy ? '-angry' : ''}.png`} alt="Andrew Neiman" />
+                <div className={`w-[20%] xl:w-[30%] 2xl:w-[25%] transition-transform duration-200 ease-in-out ${inView && '-translate-x-1/2 3xl:translate-x-0'}`}>
+                    <div className="relative h-0 pb-[124.64%]"><img className="home-c-animation-img home-c-animation-img--terence-fletcher" src={`/img/terence-fletcher${angy ? '-angry' : ''}.png`} alt="Terence Fletcher" data-angy={angy} /></div>
+                </div>
+                <div className={`w-[20%] xl:w-[30%] 2xl:w-[25%] transition-transform duration-200 ease-in-out ${inView && 'translate-x-1/2 3xl:translate-x-0'}`}>
+                    <div className="relative h-0 pb-[124.64%]"><img className="home-c-animation-img" src={`/img/andrew-neiman${angy ? '-angry' : ''}.png`} alt="Andrew Neiman" /></div>
+                </div>
             </div>
             <div className="home-c-content-wrapper z-10" ref={ref} id="top">
                 <section className="pt-96 xs:pt-80 sm:pt-64 lg:pt-48 xl:pt-12">
@@ -229,7 +233,7 @@ export default function Index() {
                                             icon in the sound card that you want to bookmark for more convenient usage. These bookmarks will persist on your device until your browser cache is cleared.</p>
                                     </div>
                                 ) : (
-                                    <div className="max-w-[850px] mx-auto p-4 pt-8 bg-slate-400 rounded-md shadow-xl flex flex-col items-center">
+                                    <div className="max-w-[850px] mx-auto p-4 pt-6 bg-slate-400 rounded-md shadow-xl flex flex-col items-center">
                                         {
                                             <div className="flex space-x-3">
                                                 <Tippy 
