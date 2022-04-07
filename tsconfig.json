@@ -1,6 +1,6 @@
 {
   "exclude": ["./cypress"],
-  "include": ["remix.env.d.ts", "**/*.ts", "**/*.js", "**/*.tsx", "app/routes/posts/index.jsx"],
+  "include": ["remix.env.d.ts", "**/*.ts", "**/*.js", "**/*.tsx", "app/routes/posts/index.jsx", "app/root.jsx"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
     "types": ["vitest/globals"],

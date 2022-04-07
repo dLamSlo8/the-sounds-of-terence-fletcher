@@ -2,7 +2,8 @@
     {
         "title": "You Know Who I Am?",
         "transcript": "You know who I am?",
-        "file": "you-know-who-i-am"
+        "file": "you-know-who-i-am",
+        "isHappy": true
     },
     {
         "title": "Wind-up Monkey",
@@ -12,7 +13,8 @@
     {
         "title": "Jacket",
         "transcript": "Oopsie daisy, forgot my jacket.",
-        "file": "forgot-my-jacket"
+        "file": "forgot-my-jacket",
+        "isHappy": true
     },
     {
         "title": "Because You're Cute",
@@ -22,12 +24,18 @@
     {
         "title": "Squeaker",
         "transcript": "We got a squeaker today, people.",
-        "file": "we-got-a-squeaker-today"
+        "file": "we-got-a-squeaker-today",
+        "isHappy": true
     },
     {
         "title": "Do Not Come Early",
         "transcript": "Barker, that is not your boyfriend's dick. Do not come early.",
         "file": "do-not-come-early"
+    },
+    {
+        "title": "Upsets Me",
+        "transcript": "Now this one really upsets me.",
+        "file": "now-this-one-upsets-me"
     },
     {
         "title": "Last Chance",
@@ -67,7 +75,8 @@
     {
         "title": "Relax",
         "transcript": "The key is to just relax.",
-        "file": "the-key-is-to-just-relax"
+        "file": "the-key-is-to-just-relax",
+        "isHappy": true
     },
     {
         "title": "*Clears Throat*",
@@ -112,7 +121,7 @@
     {
         "title": "Rushing / Dragging V4",
         "transcript": "Now are you a rusher, or are you a dragger, or are you gonna be on my fucking time?",
-        "file": "rushing-dragging-finale"
+        "file": "rushing-dragging-4"
     },
     {
         "title": "Retards At Shaffer",
@@ -127,7 +136,7 @@
     {
         "title": "Rushing / Dragging Finale",
         "transcript": "Were you rushing, or were you dragging? Answer.",
-        "file": "rushing-dragging-4"
+        "file": "rushing-dragging-finale"
     },
     {
         "title": "*Tear*",
@@ -136,7 +145,7 @@
     },
     {
         "title": "Mommy Left Daddy",
-        "transcript": "You are a worthless, friendless, faggot-lipped piece of shit, whose Mommy left Daddy when she figured out he wasn't Eugene O'Neill and who is now weeping and slobbering all over my drum set like a fucking 9-year old girl. So for the final father-fucking time, say it louder.",
+        "transcript": "You are a worthless, friendless, faggot-lipped piece of shit, whose Mommy left Daddy when she figured out he wasn't Eugene O'Neill, and who is now weeping and slobbering all over my drum set like a fucking 9-year old girl. So for the final father-fucking time, say it louder. [Neiman] I'm upset.",
         "file": "speech"
     },
     {
@@ -217,7 +226,8 @@
     {
         "title": "Sorry",
         "transcript": "I'm sorry.",
-        "file": "im-sorry"
+        "file": "im-sorry",
+        "isHappy": true
     },
     {
         "title": "Motherfucker",
@@ -255,6 +265,11 @@
         "file": "worthless-hymie-fuck-full"
     },
     {
+        "title": "Mommy Ran Out",
+        "transcript": "No wonder mommy ran out on you.",
+        "file": "no-wonder-mommy-ran-out-on-you"
+    },
+    {
         "title": "Mr. Gay Pride",
         "transcript": "And, here comes Mr. Gay Pride of the Upper West Side himself.",
         "file": "mr-gay-pride"
@@ -263,6 +278,11 @@
         "title": "Mr. Gay Pride (Extended Ver.)",
         "transcript": "And, here comes Mr. Gay Pride of the Upper West Side himself. Unforunately this is not a Bette Midler concert. We will not be serving cosmopolitans and baked Alaska, so just play faster than you give fucking handjobs, will you please?",
         "file": "mr-gay-pride-full"
+    },
+    {
+        "title": "Handjobs",
+        "transcript": "So just play faster than you give handjobs, will you please?",
+        "file": "handjobs"
     },
     {
         "title": "Not Even Fucking Close",
@@ -356,7 +376,7 @@
     },
     {
         "title": "Fletcher Goes the Fuck Off",
-        "transcript": "At 5:30, that's in exactly 11 minutes, my band is on-stage. If your ass is not on that stool with your own fucking sticks in hand, or if you make on fucking mistake, one, I will drum your ass back to Nassau where you can turn pages until you graduate or fucking drop out. By the time you're done at Shaffer, you're gonna make Daddy look like a fucking success story. Got it? Or we can let Johnny Utah play the part.",
+        "transcript": "At 5:30, that's in exactly 11 minutes, my band is on-stage. If your ass is not on that stool with your own fucking sticks in hand, or if you make one fucking mistake, one, I will drum your ass back to Nassau where you can turn pages until you graduate or fucking drop out. By the time you're done at Shaffer, you're gonna make Daddy look like a fucking success story. Got it? Or, we can let Johnny Utah play the part.",
         "file": "go-off-2"
     },
     {
@@ -372,7 +392,14 @@
     {
         "title": "Peaches and Cream",
         "transcript": "Although why anybody would have anything other than peaches and cream to say about me, is a mystery.",
-        "file": "peaches-and-cream"
+        "file": "peaches-and-cream",
+        "isHappy": true
+    },
+    {
+        "title": "Let's Have Fun",
+        "transcript": "Let's have fun.",
+        "file": "lets-have-fun",
+        "isHappy": true
     },
     {
         "title": "You Think I'm Fucking Stupid?",
@@ -385,8 +412,21 @@
         "file": "i-will-gouge-your-eye"
     },
     {
+        "title": "Motivation",
+        "transcript": "The truth is, I don't think people understood what it was I was doing at Shaffer. I wasn't there to conduct. Any fucking moron can wave his arms and keep people in tempo. I was there to push people beyond what's expected of them. I believe that is an absolute necessity. Otherwise we're depriving the world of the next Louis Armstrong, or the next Charlie Parker.",
+        "file": "motivation",
+        "isHappy": true
+    },
+    {
+        "title": "Understanding",
+        "transcript": "[Fletcher] There are no two words in the English language more harmful than 'good job'. [Neiman] But is there a line, you know, maybe you go too far and you discourage the next Charlie Parker from ever becoming Charlie Parker? [Fletcher] No man, no, because the next Charlie Parker would never be discouraged. [Neiman] Yeah.",
+        "file": "understanding",
+        "isHappy": true
+    },
+    {
         "title": "I Tried",
         "transcript": "The truth is, Andrew, I never really had a Charlie Parker. But I tried. I actually fucking tried. And that's more than most people ever do. And I will never apologize for how I tried.",
-        "file": "i-tried"
+        "file": "i-tried",
+        "isHappy": true
     }
 ]

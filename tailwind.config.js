@@ -1,7 +1,12 @@
 module.exports = {
   content: ["./app/**/*.{ts,tsx,jsx,js}"],
   theme: {
+      fontFamily: {
+          'sans': ['"PT Sans"', 'sans-serif'],
+          'serif': ['"PT Serif"', 'serif']
+      },
     screens: {
+        'xs': '450px',
         'sm': '640px',
         // => @media (min-width: 640px) { ... }
   
@@ -18,6 +23,8 @@ module.exports = {
   
         '2xl': '1536px',
         // => @media (min-width: 1536px) { ... }
+
+        '3xl': '1800px'
     },
     extend: {},
   },

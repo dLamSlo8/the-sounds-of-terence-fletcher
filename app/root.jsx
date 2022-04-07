@@ -1,8 +1,3 @@
-import type {
-  LinksFunction,
-  LoaderFunction,
-  MetaFunction,
-} from "@remix-run/node";
 import { json } from "@remix-run/node";
 import {
   Links,
@@ -18,22 +13,18 @@ import baseStylesheetUrl from './styles/index.css';
 import tippyUrl from 'tippy.js/dist/tippy.css';
 import { getUser } from "./session.server";
 
-export const links: LinksFunction = () => {
+export const links = () => {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl }, { rel: "stylesheet", href: baseStylesheetUrl }, { rel: "stylesheet", href: tippyUrl }];
 };
 
-export const meta: MetaFunction = () => ({
+export const meta = () => ({
   charset: "utf-8",
   title: "The Sounds of Terence Fletcher",
   viewport: "width=device-width,initial-scale=1",
 });
 
-type LoaderData = {
-  user: Awaited<ReturnType<typeof getUser>>;
-};
-
-export const loader: LoaderFunction = async ({ request }) => {
-  return json<LoaderData>({
+export const loader = async ({ request }) => {
+  return json({
     user: await getUser(request),
   });
 };
